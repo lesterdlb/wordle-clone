@@ -1,0 +1,158 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	max-width: 33rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background: #121213;
+	color: #ffffff;
+}
+
+header {
+	margin-top: 30px;
+}
+
+.title {
+	margin: 0;
+	text-align: center;
+	letter-spacing: 0.15rem;
+	border-bottom: 2px solid #d4d4d4;
+}
+
+#errors {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	position: absolute;
+	top: 80px;
+	width: min(100vw, 33rem);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+.attempt {
+	display: flex;
+	flex-direction: row;
+	gap: 0.25rem;
+}
+
+.letter {
+	font-size: 2.25rem;
+	line-height: 3.5rem;
+	width: 3.5rem;
+	height: 3.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 2px solid #3a3a3c;
+	margin: 0;
+	text-align: center;
+}
+
+footer {
+	margin-bottom: 40px;
+}
+
+.keyboard {
+	margin: 0 8px;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	margin: 0 auto 8px;
+	touch-action: manipulation;
+}
+
+.key {
+	background: #818384;
+	border: none;
+	border-radius: 0.25rem;
+	line-height: 1.25rem;
+	height: 3.5rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+	color: #f3ffff;
+	padding: 0;
+	margin: 0 6px 0 0;
+	user-select: none;
+	flex: 1;
+	text-transform: uppercase;
+}
+
+.half {
+	flex: 0.5;
+}
+
+.one {
+	flex: 1;
+}
+
+.one-and-a-half {
+	flex: 1.5;
+	font-size: 12px;
+}
+
+.key:hover {
+	transform: scale(1.02);
+}
+.key:active {
+	transform: scale(0.98);
+}
+
+.enter,
+.delete {
+	grid-column: span 3;
+}
+
+.delete {
+	font-size: 1.1rem;
+}
+
+.filled {
+	border-color: #737373;
+}
+
+.absent {
+	background: #3a3a3c;
+	border-color: #3a3a3c;
+	color: white;
+}
+
+.present {
+	background: #b59f3b;
+	border-color: #b59f3b;
+	color: white;
+}
+
+.correct {
+	background: #6aaa64;
+	border-color: #6aaa64;
+	color: white;
+}
+
+.error-message {
+	margin: 0;
+	border-radius: 0.25rem;
+	padding: 10px 20px;
+	background: black;
+	color: white;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.25s ease-in-out;
+}
+
+.visible {
+	opacity: 1;
+}
